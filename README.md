@@ -4,10 +4,10 @@ Configuración cliente + servidor DNS
 ### 1. Inspección de la red en Docker
 oscar@oscar-VirtualBox:~/Docker$ docker network inspect oscar_bind_network
 [
-   {
-               "Name": "oscar_bind_network",
-               "Id": "d3c1b71843a934b4bfc8398c047efb56784d4f9177d74d4b9f8090e4f45c8c1a",
-               "Created": "2024-11-14T12:35:30.123456789+00:00",
+    {
+        "Name": "oscar_bind_network",
+        "Id": "d3c1b71843a934b4bfc8398c047efb56784d4f9177d74d4b9f8090e4f45c8c1a",
+        "Created": "2024-11-14T12:35:30.123456789+00:00",
         "Scope": "local",
         "Driver": "bridge",
         "EnableIPv6": false,
