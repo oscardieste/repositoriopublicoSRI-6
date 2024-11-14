@@ -38,34 +38,57 @@ Usamos docker-compose para crear y configurar el servidor BIND9 y un contenedor 
 version: '3.8'
 
 services:
+
   oscar_bind:
+  
     container_name: oscar_bind
+    
     image: ubuntu/bind9
+    
     platform: linux/amd64
+    
     ports:
       - "53:53/tcp"
+      
       - "53:53/udp"
+      
     networks:
+    
       oscar_bind_network:
+      
         ipv4_address: 192.168.10.2
+        
     volumes:
+    
       - ./bind_conf:/etc/bind
+      
       - ./zone_data:/var/lib/bind
 
   dns_client:
+  
     container_name: dns_client
+    
     image: debian:latest
+    
     platform: linux/amd64
+    
     tty: true
+    
     stdin_open: true
+    
     dns:
       - 192.168.10.2
+      
     networks:
+    
       oscar_bind_network:
+      
         ipv4_address: 192.168.10.3
 
 networks:
+
   oscar_bind_network:
+  
     external: true
 
 
