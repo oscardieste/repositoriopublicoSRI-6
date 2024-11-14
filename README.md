@@ -5,9 +5,9 @@ Configuración cliente + servidor DNS
 oscar@oscar-VirtualBox:~/Docker$ docker network inspect oscar_bind_network
 [
    {
-   "Name": "bind9_subnet",
-        "Id": "ef5c911f15e82b5a9b59c0d1b8bc9fc49746ab040ae542b8f79b1e12d2312e0e",
-        "Created": "2024-10-25T17:50:55.279860915+02:00",
+               "Name": "oscar_bind_network",
+               "Id": "d3c1b71843a934b4bfc8398c047efb56784d4f9177d74d4b9f8090e4f45c8c1a",
+               "Created": "2024-11-14T12:35:30.123456789+00:00",
         "Scope": "local",
         "Driver": "bridge",
         "EnableIPv6": false,
@@ -15,6 +15,7 @@ oscar@oscar-VirtualBox:~/Docker$ docker network inspect oscar_bind_network
             "Driver": "default",
             "Options": {},
             "Config": [
+                {
 
     {
                     "Subnet": "192.168.10.0/24",
