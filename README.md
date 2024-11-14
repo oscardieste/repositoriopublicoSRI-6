@@ -1,18 +1,44 @@
 # repositoriopublicoSRI-6
 Configuración cliente + servidor DNS
 
-### Engade ó docker-compose do DNS outro servicio (container) que faga a función de cliente.
-
-### Usa unha imaxe alpine
-
-### Axuda: repositorio có docker-compose.yml (descargar como .zip no botón verde que pon code)
-
-### Instala, se é preciso, os paquetes que precises para usar no cliente os comando de rede do seguinte enlace.
-
-### Comproba o seu uso
-
-### Fai a instalación de dig se é preciso.
-
-### Configura o cliente para que o seu DNS sexa o otro container, modificando el resolv.conf ou usando o fichero docker-compose.yml (preferible)
-
-### Compróbao con 'dig'.
+### 1. Inspección de la red en Docker
+oscar@oscar-VirtualBox:~/Docker$ docker network inspect oscar_bind_network
+[
+    {
+        "Name": "oscar_bind_network",
+        "Id": "d3c1b71843a934b4bfc8398c047efb56784d4f9177d74d4b9f8090e4f45c8c1a",
+        "Created": "2024-11-14T12:35:30.123456789+00:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "192.168.10.0/24",
+                    "IPRange": "192.168.10.0/28",
+                    "Gateway": "192.168.10.1"
+                } 
+                ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "Configonly": false,
+        "Containers": {
+            "b9136bcf74cb1b91a23b8c9c8a3fdb68c0a30d3e2d1c5e5ad18e7048c812a2ea": {
+                "Name": "dns_client",
+                "EndpointID": "27fcbe432d3f47592e4f9483b0ec8bb2f032fc00e27c3a3c4e648a54040b9dd7",
+                "MacAddress": "02:42:c0:a8:0a:03",
+                "IPv4Address": "192.168.10.3/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
