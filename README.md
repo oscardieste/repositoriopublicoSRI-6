@@ -19,8 +19,8 @@ oscar@oscar-VirtualBox:~/Docker$ docker network inspect oscar_bind_network
                     "Subnet": "192.168.10.0/24",
                     "IPRange": "192.168.10.0/28",
                     "Gateway": "192.168.10.1"
-                } 
-                ]
+                }
+            ]
         },
         "Internal": false,
         "Attachable": true,
@@ -28,7 +28,7 @@ oscar@oscar-VirtualBox:~/Docker$ docker network inspect oscar_bind_network
         "ConfigFrom": {
             "Network": ""
         },
-        "Configonly": false,
+        "ConfigOnly": false,
         "Containers": {
             "b9136bcf74cb1b91a23b8c9c8a3fdb68c0a30d3e2d1c5e5ad18e7048c812a2ea": {
                 "Name": "dns_client",
@@ -42,3 +42,4 @@ oscar@oscar-VirtualBox:~/Docker$ docker network inspect oscar_bind_network
         "Labels": {}
     }
 ]
+
