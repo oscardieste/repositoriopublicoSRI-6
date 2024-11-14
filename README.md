@@ -94,12 +94,19 @@ networks:
 ### 4 Configuración de la Red en oscar_bind_network.json
 {
     "Name": "oscar_bind_network",
+    
     "Id": "1e5a3c45678de9b0fa2c1d23456fae9876bcdf0123456ab8d8904a78c9d01234",
+    
     "Created": "2024-11-14T13:00:00.123456789Z",
+    
     "Scope": "local",
+    
     "Driver": "bridge",
+    
     "EnableIPv6": false,
+    
     "IPAM": {
+    
         "Driver": "default",
         "Options": {},
         "Config": [
