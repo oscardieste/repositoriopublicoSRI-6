@@ -25,12 +25,5 @@ y nos dará:
                     "IPRange": "192.168.10.0/28",
                     "Gateway": "192.168.10.1"
 
-                  }
-            ]
-            },
-        "Internal": false,
-        "Attachable": true
-    }
-]
 
 
